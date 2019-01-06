@@ -60,19 +60,22 @@ public class MorseCode {
 			System.out.println("1 - To morse. ");
 			System.out.println("2 - From morse. ");
 			choise = scanner.nextLine();
-			System.out.println("Input a phrase: ");
-			text = scanner.nextLine();
-		}
-		switch (choise) {
-		case "1":
-			System.out.println(getMorse(text, map));
-			break;
-		case "2":
-			System.out.println(getFromMorse(text, map));
-			break;
-		default:
-			System.out.println("Incorect choise");
-			break;
+
+			switch (choise) {
+			case "1":
+				System.out.println("Input a phrase: ");
+				text = scanner.nextLine();
+				System.out.println(getMorse(text, map));
+				break;
+			case "2":
+				System.out.println("Input a morse phrase: ");
+				text = scanner.nextLine();
+				System.out.println(getFromMorse(text, map));
+				break;
+			default:
+				System.out.println("Incorect choise");
+				break;
+			}
 		}
 	}
 
