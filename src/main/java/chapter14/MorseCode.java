@@ -89,17 +89,16 @@ public class MorseCode {
 	}
 
 	private static String getFromMorse(String text, Map<String, String> map) {
-		// -- --- .-. ... . -.-. --- -.. .
-		StringBuilder morsePhrase = new StringBuilder();
+		StringBuilder phrase = new StringBuilder();
 		String[] transforme = text.split(" ");
 		for (int i = 0; i < transforme.length; i++) {
 			if (map.containsValue(transforme[i])) {
-				morsePhrase.append(getKeys(map, transforme[i]));
+				phrase.append(getKeys(map, transforme[i]));
 			} else {
-				morsePhrase.append(" ");
+				phrase.append(" ");
 			}
 		}
-		return morsePhrase.toString();
+		return phrase.toString();
 	}
 
 	private static String getKeys(Map<String, String> map, String value) {
